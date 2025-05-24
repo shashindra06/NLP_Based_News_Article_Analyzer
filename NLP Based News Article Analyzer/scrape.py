@@ -84,7 +84,7 @@ if __name__ == "__main__":
             raise ValueError("Input.xlsx must contain 'URL_ID' and 'URL' columns.")
 
         # Limit to the first 5 URLs for testing
-        for index, row in df.head(5).iterrows():
+        for index, row in df.iterrows():
             url_id = row['URL_ID']
             url = row['URL']
             print(f"\nScraping {url_id}: {url}")
